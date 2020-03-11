@@ -1,0 +1,234 @@
+    1  exit
+    2  docker rmi nginx
+    3  docker container ls
+    4  docker container run --publish 82:80 --detach httpd
+    5  docker container ls
+    6  curl localhost
+    7  curl localhost:82
+    8  curl localhost:80
+    9  ifconfig
+   10  docker images
+   11  docker container stats
+   12  docker container ls
+   13  docker container run -p 83:80 -d --name webhost nginx
+   14  docker container ls
+   15  docker container logs webhost
+   16  curl localhost:80
+   17  curl localhost:83
+   18  docker container logs webhost
+   19  docker container top webhost
+   20  ps -ef | grep 14027
+   21  ps auz
+   22  ps aux
+   23  docker container ps
+   24  docker container stop 2900
+   25  docker container ps
+   26  docker container ls
+   27  docker ps
+   28  docker ps -a
+   29  docker container rm 2900aa6110b7
+   30  docker ps -a
+   31  docker conatiner run -d -p 3306:3306 db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+   32  docker conatiner run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+   33  docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+   34  docker ps
+   35  docker container logs db
+   36  docker exec -it db bash
+   37  ip a
+   38  ip a more
+   39  docker container inspect
+   40  docker container inspect db | more
+   41  docker container logs db
+   42  docker container inspect db | more
+   43  mkdir testApp
+   44  vi HelloWorld.java
+   45  javac HelloWorld.java
+   46  yum install java-11-openjdk-devel
+   47  javac HelloWorld.java
+   48  vi HelloWorld.java 
+   49  javac HelloWorld.java
+   50  ll
+   51  java HelloWorld.class 
+   52  java HelloWorld.java
+   53  vi HelloWorld.java 
+   54  java HelloWorld
+   55  mv HelloWorld* testApp/
+   56  ll
+   57  cd testApp/
+   58  ll
+   59  java HelloWorld
+   60  java HelloWorld.java 
+   61  java HelloWorld.class 
+   62  vi manifest.txt
+   63  jar cfm HelloWorld.jar manifest.txt HelloWorld.class 
+   64  java -jar HelloWorld.ja
+   65  java -jar HelloWorld.jar
+   66  ll
+   67  vi Dockerfile
+   68  vi Dockerfile
+   69  docker build -t HelloWorld .
+   70  docker build -t helloworld .
+   71  docker images
+   72  ll
+   73  docker run helloworld
+   74  ll
+   75  docker run helloworld
+   76  vi Dockerfile
+   77  docker run helloworld
+   78  cat manifest.txt
+   79  vi Dockerfile 
+   80  docker build -t helloworld .
+   81  docker run helloworld
+   82  vi HelloWorld.jar
+   83  java -jar HelloWorld.jar
+   84  jar cfm HelloWorld1.jar manifest.txt HelloWorld.class 
+   85  vi Dockerfile 
+   86  docker build -t helloworld .
+   87  vi Dockerfile 
+   88  docker build -t helloworld .
+   89  docker run helloworld
+   90  java -jar HelloWorld1.jar 
+   91  vi manifest.txt
+   92  ls
+   93  rm HelloWorld*.*
+   94  ls
+   95  rm HelloWorld.jar 
+   96  vi HelloWorld.jar
+   97  ls
+   98  rm HelloWorld.jar 
+   99  vi HelloWorld.java
+  100  javac HelloWorld.java 
+  101  java HelloWorld
+  102  ls
+  103  cat manifest.txt 
+  104  jar cfm HelloWorld.jar manifest.txt HelloWorld.class 
+  105  java -jar HelloWorld.jar
+  106  cat Dockerfile 
+  107  vi Dockerfile 
+  108  docker build -t hello .
+  109  docker run hello
+  110  java -jar HelloWorld.jar
+  111  vi Dockerfile 
+  112  docker images
+  113  docker rmi hello
+  114  docker rmi hello --force
+  115  docker rmi helloworld
+  116  docker rmi helloworld --force
+  117  docker rmi 1d8d7  2467 --force
+  118  docker images
+  119  docker rmi java
+  120  docker rmi d23bd
+  121  docker rmi ff31
+  122  docker build -t helloworld .
+  123  docker images
+  124  docker run helloworld
+  125  ls
+  126  vi manifest.txt 
+  127  cd ..
+  128  docker rmi d1938173aa78 ff31919fd91c 
+  129  docker rmi d1938173aa78 ff31919fd91c --force
+  130  ll
+  131  docker images
+  132  mkdir hello
+  133  cd hello/
+  134  viHelloWorld.java
+  135  viH elloWorld.java
+  136  vi HelloWorld.java
+  137  vi HelloWorld.java
+  138  java HelloWorld.java 
+  139  javac HelloWorld.java
+  140  ll
+  141  vi manifest.txt
+  142  ll
+  143  cat manifest.txt 
+  144  jar cfm HelloWorld.jar manifest.txt HelloWorld.class
+  145  ll
+  146  java -jar HelloWorld.jar
+  147  vi Dockerfile
+  148  ll
+  149  docker build -t hello .
+  150  ll
+  151  vi Dockerfile
+  152  docker build -t hello .
+  153  vi Dockerfile
+  154  docker build -t hello .
+  155  docker run hello
+  156  cd ..
+  157  cd testApp/
+  158  ll
+  159  cat manifest.txt 
+  160  cat Dockerfile 
+  161  vi Dockerfile 
+  162  docker images
+  163  docker rmi 497044cdc724 --force
+  164  ll
+  165  docker imaes
+  166  docker images
+  167  docker rmi ff31919fd91c
+  168  docker images
+  169  docker -t hello .
+  170  docker build -t hello .
+  171  docker run hello
+  172  docker images
+  173  docker tag 36b0aa465359 bhagathpb/hello
+  174  docker images
+  175  docker login
+  176  dockerimages
+  177  docker images
+  178  docker push bhagathpb/hello
+  179  history >> devops.txt
+  180  docker images
+  181  docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql
+  182  docker ps
+  183  docker volume ls
+  184  docker volume ls
+  185  docker ps
+  186  docker images
+  187  docker ps
+  188  docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql
+  189  docker container purge
+  190  docker container prune
+  191  docker images prune
+  192  docker ps -a
+  193  docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql
+  194  docker ps
+  195  docker ps
+  196  docker ps
+  197  docker system prune
+  198  docker images
+  199  docker ps
+  200  docker rm 76139a7455c1 --force
+  201  docker ps -a
+  202  docker container run -d --name mysql1 -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql
+  203  docker volume
+  204  docker volume ls
+  205  docker ps
+  206  docker rm 4f2366aafd98 --force
+  207  docker ps
+  208  docker volume -a
+  209  docker volume inspect
+  210  docker volume inspace mysql-db
+  211  docker volume inspect mysql-db
+  212  docker volume inspect -a
+  213  docker volume inspect --help
+  214  docker volume ls
+  215  docker ps
+  216  docker volume inspect 0f7c1d1b4ead49d54227021f3cda589d2a7544ead6b0e33cfc0c89095834e86b
+  217  docker volume inspect a0d46588a22a80495bc6ac01e5bf84adf3531953b6a39018ebbaf17104097066
+  218  docker volume inspect f5739d3b6e9e5c859e80c4289d7d7d1229f7387565637654a568d511bec7b566
+  219  docker container inspect f5739d3b6e9e5c859e80c4289d7d7d1229f7387565637654a568d511bec7b566
+  220  docker container inspect
+  221  docker container inspect --help
+  222  docker container inspect -s
+  223  docker container ls
+  224  docker inspect
+  225  docker container inspect a7e6742f6094
+  226  ll
+  227  cd hello/
+  228  ll
+  229  cd ..
+  230  cd testApp/
+  231  ll
+  232  history
+  233  cd ../hello/
+  234  history >> devops.txt
